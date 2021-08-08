@@ -47,6 +47,14 @@ export default {
       video.play();
     });
    	}
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'https://d3ag4xv79rahjs.cloudfront.net/7d86d6f8-697e-48f1-ba53-d35cadf304c4/hls/60a4a09f54927853d7daf67d_Ott_Hls_Ts_Avc_Aac_16x9_1920x1080p_30Hz_8.5Mbps_qvbr.m3u8';
+    video.addEventListener('loadedmetadata', function() {
+      video.muted = true;
+      video.loop = true;
+      video.play();
+    });
+   }
   }
 }
 
